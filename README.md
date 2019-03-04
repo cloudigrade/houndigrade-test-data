@@ -11,7 +11,8 @@ This repo is just a collection of data files for testing houndigrade.
 | disks/misc_empty       | 1         | no    | empty ext4 filesystem                                         |
 | disks/misc_ntfs        | 1         | no    | Windows-like NTFS filesystem                                  |
 | disks/rhel_all         | 1         | yes   | has RHEL product cert, release file, yum repo, and signed RPM |
-| disks/rhel_cert        | 1         | yes   | has RHEL product cert                                         |
+| disks/rhel_cert        | 1         | yes   | has RHEL product cert in ``/etc/pki/product/``                |
+| disks/rhel_cert2       | 1         | yes   | has RHEL product cert in ``/etc/pki/product-default/``        |
 | disks/rhel_partitioned | 1         | no    | is swap                                                       |
 | disks/rhel_partitioned | 2         | yes   | has RHEL release file                                         |
 | disks/rhel_partitioned | 3         | no    | empty filesystem                                              |
