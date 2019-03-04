@@ -7,7 +7,7 @@ This repo is just a collection of data files for testing houndigrade.
 | filename               | partition | RHEL? | description                                                   |
 | ---------------------- | --------- | ----- | ------------------------------------------------------------- |
 | disks/centos_release   | 1         | no    | has CentOS release file                                       |
-| disks/misc_bad_files   | 1         | no    | has a "bad" non-text release file and yum.conf                |
+| disks/misc_bad_files   | 1         | no    | has a "bad" non-text release file, yum.conf, and RPM DB       |
 | disks/misc_empty       | 1         | no    | empty ext4 filesystem                                         |
 | disks/misc_ntfs        | 1         | no    | Windows-like NTFS filesystem                                  |
 | disks/rhel_all         | 1         | yes   | has RHEL product cert, release file, yum repo, and signed RPM |
