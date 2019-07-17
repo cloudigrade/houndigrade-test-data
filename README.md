@@ -4,21 +4,21 @@ This repo is just a collection of data files for testing houndigrade.
 
 ## Disk files summary
 
-| filename               | partition | RHEL? | description                                                   |
-| ---------------------- | --------- | ----- | ------------------------------------------------------------- |
-| disks/centos_release   | 1         | no    | has CentOS release file                                       |
-| disks/misc_bad_files   | 1         | no    | has a "bad" non-text release file, yum.conf, and RPM DB       |
-| disks/misc_empty       | 1         | no    | empty ext4 filesystem                                         |
-| disks/misc_ntfs        | 1         | no    | Windows-like NTFS filesystem                                  |
-| disks/rhel_all         | 1         | yes   | has RHEL product cert, release file, yum repo, and signed RPM |
-| disks/rhel_cert        | 1         | yes   | has RHEL product cert in ``/etc/pki/product/``                |
-| disks/rhel_cert2       | 1         | yes   | has RHEL product cert in ``/etc/pki/product-default/``        |
-| disks/rhel_partitioned | 1         | no    | is swap                                                       |
-| disks/rhel_partitioned | 2         | yes   | has RHEL release file                                         |
-| disks/rhel_partitioned | 3         | no    | empty filesystem                                              |
-| disks/rhel_release     | 1         | yes   | has RHEL release file                                         |
-| disks/rhel_repo        | 1         | yes   | has RHEL yum repo enabled                                     |
-| disks/rhel_rpms        | 1         | yes   | has a Red Hat-signed RPM installed (according to RPM DB)      |
+| filename               | partition | RHEL? | description                                                              |
+| ---------------------- | --------- | ----- | ------------------------------------------------------------------------ |
+| disks/centos_release   | 1         | no    | has CentOS release file                                                  |
+| disks/misc_bad_files   | 1         | no    | has a "bad" non-text release file, yum.conf, RPM DB, and syspurpose file |
+| disks/misc_empty       | 1         | no    | empty ext4 filesystem                                                    |
+| disks/misc_ntfs        | 1         | no    | Windows-like NTFS filesystem                                             |
+| disks/rhel_all         | 1         | yes   | has RHEL product cert, release file, yum repo, and signed RPM            |
+| disks/rhel_cert        | 1         | yes   | has RHEL product cert in ``/etc/pki/product/``                           |
+| disks/rhel_cert2       | 1         | yes   | has RHEL product cert in ``/etc/pki/product-default/``                   |
+| disks/rhel_partitioned | 1         | no    | is swap                                                                  |
+| disks/rhel_partitioned | 2         | yes   | has RHEL release file                                                    |
+| disks/rhel_partitioned | 3         | no    | empty filesystem                                                         |
+| disks/rhel_release     | 1         | yes   | has RHEL release file                                                    |
+| disks/rhel_repo        | 1         | yes   | has RHEL yum repo enabled                                                |
+| disks/rhel_rpms        | 1         | yes   | has a Red Hat-signed RPM installed (according to RPM DB)                 |
 
 ## Disk files HOWTO
 
