@@ -4,22 +4,23 @@ This repo is just a collection of data files for testing houndigrade.
 
 ## Disk files summary
 
-| filename               | partition | RHEL? | description                                                                    |
-| ---------------------- | --------- | ----- | ------------------------------------------------------------------------------ |
-| disks/centos_release   | 1         | no    | has CentOS release file                                                        |
-| disks/misc_bad_files   | 1         | no    | has a "bad" non-text release file, yum.conf, RPM DB, and syspurpose file       |
-| disks/misc_empty       | 1         | no    | empty ext4 filesystem                                                          |
-| disks/misc_ntfs        | 1         | no    | Windows-like NTFS filesystem                                                   |
-| disks/rhel_all         | 1         | yes   | has RHEL product cert, release file, yum repo, signed RPM, and syspurpose file |
-| disks/rhel_dnf         | 1         | yes   | has RHEL dnf repo enabled                                                      |
-| disks/rhel_cert        | 1         | yes   | has RHEL product cert in ``/etc/pki/product/``                                 |
-| disks/rhel_cert2       | 1         | yes   | has RHEL product cert in ``/etc/pki/product-default/``                         |
-| disks/rhel_partitioned | 1         | no    | is swap                                                                        |
-| disks/rhel_partitioned | 2         | yes   | has RHEL release file                                                          |
-| disks/rhel_partitioned | 3         | no    | empty filesystem                                                               |
-| disks/rhel_release     | 1         | yes   | has RHEL release file                                                          |
-| disks/rhel_repo        | 1         | yes   | has RHEL yum repo enabled                                                      |
-| disks/rhel_rpms        | 1         | yes   | has a Red Hat-signed RPM installed (according to RPM DB)                       |
+| filename                  | partition | RHEL? | description                                                                    |
+| ------------------------- | --------- | ----- | ------------------------------------------------------------------------------ |
+| disks/centos_release      | 1         | no    | has CentOS release file                                                        |
+| disks/misc_bad_files      | 1         | no    | has a "bad" non-text release file, yum.conf, RPM DB, and syspurpose file       |
+| disks/misc_empty          | 1         | no    | empty ext4 filesystem                                                          |
+| disks/misc_ntfs           | 1         | no    | Windows-like NTFS filesystem                                                   |
+| disks/rhel_all            | 1         | yes   | has RHEL product cert, release file, yum repo, signed RPM, and syspurpose file |
+| disks/rhel_bad_syspurpose | 1         | yes   | has RHEL release file and a corrupt 2K syspurpose file                         |
+| disks/rhel_dnf            | 1         | yes   | has RHEL dnf repo enabled                                                      |
+| disks/rhel_cert           | 1         | yes   | has RHEL product cert in ``/etc/pki/product/``                                 |
+| disks/rhel_cert2          | 1         | yes   | has RHEL product cert in ``/etc/pki/product-default/``                         |
+| disks/rhel_partitioned    | 1         | no    | is swap                                                                        |
+| disks/rhel_partitioned    | 2         | yes   | has RHEL release file                                                          |
+| disks/rhel_partitioned    | 3         | no    | empty filesystem                                                               |
+| disks/rhel_release        | 1         | yes   | has RHEL release file                                                          |
+| disks/rhel_repo           | 1         | yes   | has RHEL yum repo enabled                                                      |
+| disks/rhel_rpms           | 1         | yes   | has a Red Hat-signed RPM installed (according to RPM DB)                       |
 
 ## Disk files HOWTO
 
@@ -49,6 +50,9 @@ losetup -D  # detach any existing loop devices
 losetup -P /dev/loop0 /disks/my_new_disk
 mkfs.ext4 /dev/loop0p1
 ```
+
+_Note_: The default number of i-nodes on a 70K ext4 disk is 16. For additional inodes,
+use the -N option with the mkfs.ext4 command.
 
 Mount the new partition and put things in it:
 ```
