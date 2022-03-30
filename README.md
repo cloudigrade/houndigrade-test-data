@@ -10,6 +10,7 @@ This repo is just a collection of data files for testing houndigrade.
 | disks/misc_bad_files      | 1         | no    | has a "bad" non-text release file, yum.conf, RPM DB, and syspurpose file       |
 | disks/misc_empty          | 1         | no    | empty ext4 filesystem                                                          |
 | disks/misc_ntfs           | 1         | no    | Windows-like NTFS filesystem                                                   |
+| disks/rhcos_release       | 1         | yes   | has RHEL release file, ostree deployment                                       |
 | disks/rhel_all            | 1         | yes   | has RHEL product cert, release file, yum repo, signed RPM, and syspurpose file |
 | disks/rhel_bad_syspurpose | 1         | yes   | has RHEL release file and a corrupt 2K syspurpose file                         |
 | disks/rhel_dnf            | 1         | yes   | has RHEL dnf repo enabled                                                      |
